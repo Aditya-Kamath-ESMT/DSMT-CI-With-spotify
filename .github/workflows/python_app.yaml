@@ -64,11 +64,11 @@ jobs:
         # flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
     # TODO: Add steps to run formatting steps and type checking
-    name: Format with ruff
-    run: uvx ruff format --check 
+    - name: Format with ruff
+      run: uvx ruff format --check 
     
-    name: Sort imports
-    run: uvx isort . --check
+    - name: Sort imports
+      run: uvx isort . --check
 
-    name: Type check
-    run: uvx ty check
+    - name: Type check
+      run: uvx ty check
